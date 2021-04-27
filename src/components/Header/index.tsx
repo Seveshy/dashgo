@@ -14,12 +14,7 @@ export function Header() {
         base: false,
         lg: true
     })
-
-    
-    
     return (
-        
-
         <Flex
             as="header"
             w="100%"
