@@ -33,7 +33,6 @@ export default function UserList() {
   return (
     <Box>
       <Header />
-
       <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
         <Sidebar />
 
@@ -95,14 +94,13 @@ export default function UserList() {
                               </Text>
                             </Box>
                           </Td>
-                          {isWideVersion && <Td>{user.createdAt}</Td>}
+                          {isWideVersion && <Td>{user.created_at}</Td>}
                         </Tr>
                       </>
                     );
                   })}
                 </Tbody>
               </Table>
-
               <Pagination />
             </>
           )}
