@@ -44,7 +44,7 @@ export function makeServer() {
                 const pageEnd = pageStart + Number(per_page);
 
                 const users = this.serialize(schema.all('user'))
-                    .user.slice(pageStart, pageEnd)
+                    .users.slice(pageStart, pageEnd);
 
                 return new Response(
                     200,
