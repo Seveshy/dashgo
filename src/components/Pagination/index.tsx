@@ -64,7 +64,7 @@ export function Pagination({
                     return <PaginationItem onPageChange={onPageChange} key={page} number={page} />
                 })}
 
-                {(currentPage + sibligsCount) && (
+                {(currentPage + sibligsCount) < lastPage && (
                     <>
                         {( currentPage + 1 + sibligsCount ) < lastPage && 
                         <Text color="gray.300" width="8" textAlign="center">...</Text> }
