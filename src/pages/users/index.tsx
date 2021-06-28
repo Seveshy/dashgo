@@ -26,11 +26,11 @@ import { api } from "../../services/api";
 import { useUsers } from "../../services/hooks/userUsers";
 import { queryClient } from "../../services/queryClient";
 
-export default function UserList() {
+export default function UserList({ users }) {
   const [page, setPage] = useState(1);
-  const { data, isLoading, error, isFetching } = useUsers(page);
-
-  console.log(page);
+  const { data, isLoading, error, isFetching } = useUsers(page, {
+    initialData: users, 
+  });
 
   const isWideVersion = useBreakpointValue({
     base: false,
